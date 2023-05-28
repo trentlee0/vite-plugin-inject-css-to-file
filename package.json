@@ -1,0 +1,45 @@
+{
+  "name": "vite-plugin-inject-css-to-file",
+  "version": "1.0.0",
+  "description": "A vite plugin that inject css to file",
+  "scripts": {
+    "build": "del-cli dist && unbuild",
+    "release": "npm run build && npm publish"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vite-plugin",
+    "inject-css"
+  ],
+  "author": "Trent0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trentlee0/vite-plugin-inject-css-to-file.git"
+  },
+  "bugs": {
+    "url": "https://github.com/trentlee0/vite-plugin-inject-css-to-file/issues"
+  },
+  "homepage": "https://github.com/trentlee0/vite-plugin-inject-css-to-file#readme",
+  "peerDependencies": {
+    "vite": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "del-cli": "^5.0.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4",
+    "unbuild": "^1.2.1",
+    "vite": "^4.3.9"
+  }
+}
